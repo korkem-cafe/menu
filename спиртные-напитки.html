@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="kk">
+<head>
+<meta charset="utf-8"/>
+<title>Спиртные напитки</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f6f0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #8da77b;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    a {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #6c8e5d;
+      text-decoration: none;
+    }
+  
+.search-bar {
+  text-align: center;
+  margin: 20px 0;
+}
+.search-bar input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #8da77b;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Спиртные напитки</h1>
+</header>
+<a href="index.html">← Бас бетке қайту</a>
+<div class="search-bar"><input id="menuSearch" placeholder="Тағам атауын іздеңіз..." type="text"/></div><section>
+<div class="card">
+<img alt="Казахстан Бахус" src="images/казахстан-бахус.jpg"/>
+<h3>Казахстан Бахус</h3>
+<p>5000тг</p>
+</div>
+<div class="card">
+<img alt="шампанское" src="images/шампанское.jpg"/>
+<h3>шампанское</h3>
+<p>1500тг</p>
+</div>
+<div class="card">
+<img alt="Qazaq style" src="images/qazaq-style.jpg"/>
+<h3>Qazaq style</h3>
+<p>2500тг</p>
+</div>
+<div class="card">
+<img alt="абсолют" src="images/абсолют.jpg"/>
+<h3>абсолют</h3>
+<p>8500тг</p>
+</div>
+<div class="card">
+<img alt="Айдабульская" src="images/айдабульская.jpg"/>
+<h3>Айдабульская</h3>
+<p>2400тг</p>
+</div>
+<div class="card">
+<img alt="водка 130гр" src="images/водка-130гр.jpg"/>
+<h3>водка 130гр</h3>
+<p>1000тг</p>
+</div>
+<div class="card">
+<img alt="водка 100гр" src="images/водка-100гр.jpg"/>
+<h3>водка 100гр</h3>
+<p>700тг</p>
+</div>
+<div class="card">
+<img alt="виски 0,5" src="images/виски-05.jpg"/>
+<h3>виски 0,5</h3>
+<p>12000тг</p>
+</div>
+<div class="card">
+<img alt="виски 0,1" src="images/виски-01.jpg"/>
+<h3>виски 0,1</h3>
+<p>1200тг</p>
+</div>
+<div class="card">
+<img alt="веловка" src="images/веловка.jpg"/>
+<h3>веловка</h3>
+<p>2800тг</p>
+</div>
+<div class="card">
+<img alt="архангельская" src="images/архангельская.jpg"/>
+<h3>архангельская</h3>
+<p>4000тг</p>
+</div>
+<div class="card">
+<img alt="кызылжар черный" src="images/кызылжар-черный.jpg"/>
+<h3>кызылжар черный</h3>
+<p>4000тг</p>
+</div>
+<div class="card">
+<img alt="немиров" src="images/немиров.jpg"/>
+<h3>немиров</h3>
+<p>4600тг</p>
+</div>
+<div class="card">
+<img alt="романов" src="images/романов.jpg"/>
+<h3>романов</h3>
+<p>4500тг</p>
+</div>
+<div class="card">
+<img alt="синяя гора" src="images/синяя-гора.jpg"/>
+<h3>синяя гора</h3>
+<p>2500тг</p>
+</div>
+<div class="card">
+<img alt="царский" src="images/царский.jpg"/>
+<h3>царский</h3>
+<p>8000тг</p>
+</div>
+</section>
+<script>
+document.getElementById('menuSearch').addEventListener('input', function() {
+  let filter = this.value.toLowerCase();
+  document.querySelectorAll('.card').forEach(function(card) {
+    let text = card.innerText.toLowerCase();
+    card.style.display = text.includes(filter) ? 'block' : 'none';
+  });
+});
+</script></body>
+</html>

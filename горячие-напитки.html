@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="kk">
+<head>
+<meta charset="utf-8"/>
+<title>Горячие напитки</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f6f0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #8da77b;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    a {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #6c8e5d;
+      text-decoration: none;
+    }
+  
+.search-bar {
+  text-align: center;
+  margin: 20px 0;
+}
+.search-bar input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #8da77b;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Горячие напитки</h1>
+</header>
+<a href="index.html">← Бас бетке қайту</a>
+<div class="search-bar"><input id="menuSearch" placeholder="Тағам атауын іздеңіз..." type="text"/></div><section>
+<div class="card">
+<img alt="кофе" src="images/кофе.jpg"/>
+<h3>кофе</h3>
+<p>300тг</p>
+</div>
+<div class="card">
+<img alt="чай бокал" src="images/чай-бокал.jpg"/>
+<h3>чай бокал</h3>
+<p>150тг</p>
+</div>
+<div class="card">
+<img alt="чай зеленый" src="images/чай-зеленый.jpg"/>
+<h3>чай зеленый</h3>
+<p>300тг</p>
+</div>
+<div class="card">
+<img alt="чай черный" src="images/чай-черный.jpg"/>
+<h3>чай черный</h3>
+<p>300тг</p>
+</div>
+<div class="card">
+<img alt="чай ташкентский" src="images/чай-ташкентский.jpg"/>
+<h3>чай ташкентский</h3>
+<p>500тг</p>
+</div>
+<div class="card">
+<img alt="чай с молоком" src="images/чай-с-молоком.jpg"/>
+<h3>чай с молоком</h3>
+<p>500тг</p>
+</div>
+<div class="card">
+<img alt="чай с молоком бокал" src="images/чай-с-молоком-бокал.jpg"/>
+<h3>чай с молоком бокал</h3>
+<p>200тг</p>
+</div>
+</section>
+<script>
+document.getElementById('menuSearch').addEventListener('input', function() {
+  let filter = this.value.toLowerCase();
+  document.querySelectorAll('.card').forEach(function(card) {
+    let text = card.innerText.toLowerCase();
+    card.style.display = text.includes(filter) ? 'block' : 'none';
+  });
+});
+</script></body>
+</html>
